@@ -1,0 +1,15 @@
+*** Settings ***
+Library           String
+Library           SeleniumLibrary
+
+*** Settings ***
+Documentation
+
+Resource	keywords.txt
+
+*** Test Cases ***
+
+Valid Login
+	Given i_have_launch_the_site_protect_site
+	When i_login_with_a_valid_user
+	Then i_should_see_the_home_page

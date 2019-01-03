@@ -1,0 +1,8 @@
+robotframework
+requests
+robotframework-requests
+robotframework-seleniumlibrary
+robotframework-faker
+selenium
+robotframework-databaselibrary
+chromedriver_installer

@@ -1,0 +1,13 @@
+---
+- name: I have launch the SiteProtect site
+  uid: fe9ff3a0-fa32-4619-a239-360ac99181c0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I login with a valid user
+  uid: 20d26171-abc9-4f52-b75c-5147102edc6c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I should see the Home page
+  uid: 0f95251c-666b-46e4-9250-6b67ff8770af
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

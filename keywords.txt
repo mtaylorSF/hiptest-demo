@@ -1,0 +1,26 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           OperatingSystem
+Library           BuiltIn
+Library           String      
+
+*** Keywords ***
+i_have_launch_the_site_protect_site
+    Open Browser  url=https://signon.qasiteprotect.com
+    ...           browser=headlesschrome
+    Set Selenium Speed    0.5s
+    Set Window Size       1440  900
+
+i_login_with_a_valid_user
+    Log in with user    neustarsp+robot_DC_account@gmail.com   Password123!
+
+i_should_see_the_home_page
+    Wait Until Element Is Visible    xpath=//div[contains(@class, "avatar avatar-image avatar")]/..  timeout=15s
+
+Log in with user
+    [Arguments]   ${USERNAME}   ${PASSWORD}
+    Wait Until Element Is Visible    css:[type="email"]   timeout=15s
+    Input Text    css:[type="email"]    ${USERNAME}
+    Input Text    css:[type="password"]    ${PASSWORD}
+    Click Element    css:.auth0-label-submit
+    
